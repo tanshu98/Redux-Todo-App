@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Box, Typography } from "@mui/material";
+import AddTodo from "./components/AddTodo";
+import Todos from "./components/Todos";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Typography
+        variant="h5"
+        sx={{ display: "flex", justifyContent: "center", mt: 8, mb:2 }}
+      >
+        Todo App Using Redux
+      </Typography>
+
+      <Box sx={{ display: "flex", justifyContent: "center" , flexDirection: 'column', alignItems: 'center'}}>
+        <AddTodo />
+        <Todos />
+      </Box>
+    </>
   );
 }
 
